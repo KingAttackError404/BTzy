@@ -11,6 +11,11 @@ var parsed = url.parse(target);
 var host = url.parse(target).host;
 var time = process.argv[3];
 
+let counter = 0;
+while (counter < 100000000) {
+  console.log("Podi Attacking To ${url}" + (counter + 1));));
+  counter++;
+
 process.on('uncaughtException', function (e) {
     console.warn(e);
 });
