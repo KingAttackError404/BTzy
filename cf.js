@@ -30,7 +30,8 @@ const url = process.argv[2]
 const time = Number(process.argv[3])
 const threads = Number(process.argv[4]) || 1;
 
-console.log(`     ╔═╗╔╦╗╔╦╗╔═╗╔═╗╦╔═  ╔═╗╔═╗╔╗╔╔╦╗         
+console.log(`    
+                  ╔═╗╔╦╗╔╦╗╔═╗╔═╗╦╔═  ╔═╗╔═╗╔╗╔╔╦╗         
                   ╠═╣ ║  ║ ╠═╣║  ╠╩╗  ╚═╗║╣ ║║║ ║║         
                   ╩ ╩ ╩  ╩ ╩ ╩╚═╝╩ ╩  ╚═╝╚═╝╝╚╝═╩╝         
                 ╚╦════════════════════════════════╦╝       
@@ -40,8 +41,9 @@ console.log(`     ╔═╗╔╦╗╔╦╗╔═╗╔═╗╦╔═  ╔═
                    TARGET   : [${url}]      
                    PORT     : [80]                        
                    DURATION : [${time}]                        
-                   THEARDS  : [${threads}]                        
-                   SENT BY  : [PabloTzy x Podi Xyz]             
+                   THEARDS  : [${threads}]       
+                   METHODS  : [KILLER-WEB]
+                   SENT BY  : [PabloTzy x Podi Xyz]          
                    COOLDOWN : [0]                          
                    CONCS    : [1]                          
                    VIP      : [True]                       
