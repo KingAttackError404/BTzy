@@ -1,4 +1,4 @@
- import socket
+import socket
 import os
 import requests
 import random
@@ -23,8 +23,10 @@ def clear():
 proxys = open('proxies.txt').readlines()
 bots = len(proxys) 
 
+print("Type Menu To See Commands")
+
 def si():
-    print(f"         \x1b]2;FzD C2 --> Stars: [{bots}] | Online Users: [1] | Methods: [25] | Bypass: [10] | Amps: [1]\x07")
+    print(f"         \x1b]2;Red Panel C2 --> Stars: [{bots}] | Online Users: [1] | Methods: [25] | Bypass: [10] | Amps: [1]\x07")
     print("")
 
 def tools():
@@ -131,33 +133,11 @@ def get_device_name():
     return hostname
 
 def menu(): 
-     sys.stdout.write(f"         \x1b]2;FzD C2 --> Stars: [{bots}] | Online Users: [1] | Methods: [25] | Bypass: [10] | Amps: [1]\x07") 
+     sys.stdout.write(f"         \x1b]2;Red Panel C2 --> Stars: [{bots}] | Online Users: [1] | Methods: [25] | Bypass: [10] | Amps: [1]\x07") 
      clear() 
      print('\x1b[38;2;0;255;255m[ \x1b[38;2;233;233;233mFzD \x1b[38;2;0;255;255m] | \x1b[38;2;233;233;233mWelcome to FzD C2! \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mOwner: FzD Team \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mUpdate v1.1\x1b[38;2;0;255;255m | \x1b[38;2;0;255;255m[ \x1b[38;2;233;233;233mFzD \x1b[38;2;0;255;255m]') 
      print("") 
      print(""" 
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-╔═══╗╔═══╗
-║╔═╗║║╔═╗║
-║║─║║║╚══╗
-║║─║║╚══╗║
-║╚═╝║║╚═╝║
-╚═══╝╚═══╝
-
-
                         \x1b[38;2;0;212;14m╔═══╗\x1b[38;2;0;186;45m╔═══╗ \x1b[38;2;0;150;88m╔═══╗\x1b[38;2;0;113;133m╔═══╗\x1b[38;2;0;83;168m╔═══╗\x1b[38;2;0;49;147m╔═══╗
                         \x1b[38;2;0;212;14m║╔═╗║\x1b[38;2;0;186;45m╚╗╔╗║ \x1b[38;2;0;150;88m╚╗╔╗║\x1b[38;2;0;113;133m╚╗╔╗║\x1b[38;2;0;83;168m║╔═╗║\x1b[38;2;0;49;147m║╔═╗║
                         \x1b[38;2;0;212;14m║╚═╝║\x1b[38;2;0;186;45m─║║║║ \x1b[38;2;0;150;88m─║║║║\x1b[38;2;0;113;133m─║║║║\x1b[38;2;0;83;168m║║─║║\x1b[38;2;0;49;147m║╚══╗
@@ -170,7 +150,7 @@ def menu():
                  \x1b[38;2;0;212;14m║ \x1b[38;2;0;49;147m- - - - -  \x1b[38;2;239;239;239mPrivate DDoS Panel 2023\x1b[38;2;0;212;14m - - - - - \x1b[38;2;0;49;147m║ 
                  \x1b[38;2;0;212;14m╚═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╝ 
                      \x1b[38;2;0;212;14m╔═══════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════╗ 
-                     \x1b[38;2;0;212;14m║\x1b[38;2;239;239;239mhttps://github.com/177Members/ZxCDDoS \x1b[38;2;0;49;147m║  
+                     \x1b[38;2;0;212;14m║\x1b[38;2;239;239;239mhttps://github.com/KingAttackError404 \x1b[38;2;0;49;147m║  
                      \x1b[38;2;0;212;14m╚═══════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════╝ 
                  \x1b[38;2;0;212;14m╔═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╗ 
                  \x1b[38;2;0;212;14m║   \x1b[38;2;239;239;239m   Type help to see the all commands.      \x1b[38;2;0;49;147m║ 
