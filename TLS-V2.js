@@ -16,6 +16,7 @@ function printRunning() {
 
 while (true) {
     printRunning();
+}
 
 
  const net = require("net");
