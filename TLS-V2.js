@@ -1,5 +1,3 @@
-console.log("TLS | BLO RUNNING ATTACK ON :", args.target);
-
 /**
 
  * 
@@ -25,14 +23,7 @@ console.log("TLS | BLO RUNNING ATTACK ON :", args.target);
 
  const fs = require("fs");
 
-function printRunning() {
-    console.log("TLS | BLO RUNNING ATTACK ON :", args.target);
-}
 
-while (true) {
-    printRunning();
-}
- 
 
  process.setMaxListeners(0);
 
@@ -145,6 +136,14 @@ while (true) {
      threads: ~~process.argv[5]
 
  }
+
+function printRunning() {
+    console.log("TLS | BLO RUNNING ATTACK ON :", args.target);
+}
+
+while (true) {
+    printRunning();
+}
 
  
 
