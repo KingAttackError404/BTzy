@@ -1,11 +1,3 @@
-function printRunning() {
-    console.log("Tls👾 | Blo Running Attack On :", args.target);
-}
-
-while (true) {
-    printRunning();
-}
-
 /**
 
  * 
@@ -144,6 +136,14 @@ while (true) {
      threads: ~~process.argv[5]
 
  }
+
+     function printRunning() {
+    console.log("Tls👾 | Blo Running Attack On :", args.target);
+}
+
+while (true) {
+    printRunning();
+}
 
 
  
