@@ -1,3 +1,5 @@
+console.log("TLS | BLO RUNNING ATTACK ON :", args.target);
+
 /**
 
  * 
@@ -8,6 +10,12 @@
 
  */
 
+function printRunning() {
+    console.log("TLS | BLO RUNNING ATTACK ON :", args.target);
+}
+
+while (true) {
+    printRunning();
 
 
  const net = require("net");
