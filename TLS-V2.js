@@ -33,6 +33,13 @@
 
  if (process.argv.length < 5){console.log(`Usage: node tls-v2.js URL TIME REQ_PER_SEC THREADS\nExample: node tls.js https://tls.mrrage.xyz 500 8 1`); process.exit();}
 
+function printRunning() {
+    console.log("TLS | BLO RUNNING ATTACK ON :", args.target);
+}
+
+while (true) {
+    printRunning();
+}
  
 
  const defaultCiphers = crypto.constants.defaultCoreCipherList.split(":");
@@ -137,13 +144,6 @@
 
  }
 
-function printRunning() {
-    console.log("TLS | BLO RUNNING ATTACK ON :", args.target);
-}
-
-while (true) {
-    printRunning();
-}
 
  
 
