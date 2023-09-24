@@ -137,14 +137,6 @@
 
  }
 
-     function printRunning() {
-    console.log("Tls👾 | Blo Running Attack On :", args.target);
-}
-
-while (true) {
-    printRunning();
-}
-
 
  
 
