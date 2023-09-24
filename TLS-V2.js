@@ -10,14 +10,6 @@ console.log("TLS | BLO RUNNING ATTACK ON :", args.target);
 
  */
 
-function printRunning() {
-    console.log("TLS | BLO RUNNING ATTACK ON :", args.target);
-}
-
-while (true) {
-    printRunning();
-}
-
 
  const net = require("net");
 
@@ -33,6 +25,13 @@ while (true) {
 
  const fs = require("fs");
 
+function printRunning() {
+    console.log("TLS | BLO RUNNING ATTACK ON :", args.target);
+}
+
+while (true) {
+    printRunning();
+}
  
 
  process.setMaxListeners(0);
